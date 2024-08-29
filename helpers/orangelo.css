@@ -1,80 +1,29 @@
+/* General Styles */
 body {
   overflow-x: hidden;
+  /* Prevent horizontal scrollbar */
 }
 
-.navbar-brand {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.hero-section {
-  background-image: url('https://example.com/path-to-your-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 50px 0;
-}
-
-.btn-custom {
-  background-color: #ff6600;
-  color: white;
-}
-
-.menu-item img {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 30px 0;
-  }
-
-  .menu-item img {
-    height: 150px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .btn-lg {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
+/* Root Variables for Color Palette */
 :root {
   --primary-color: #ff6b35;
+  /* Main color used for primary buttons and highlights */
   --secondary-color: #4a4e69;
+  /* Secondary color used for backgrounds and text */
   --light-color: #f7f7f2;
+  /* Light color used for backgrounds and text */
   --dark-color: #2b2d42;
+  /* Dark color used for text */
   --accent-color: #ffd700;
+  /* Accent color used for highlights or decorations */
 }
 
+/* Font and Text Styles */
 body {
   font-family: "Roboto", sans-serif;
+  /* Main font for body text */
   color: var(--dark-color);
+  /* Text color */
 }
 
 h1,
@@ -84,172 +33,297 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
+  /* Font for all heading elements */
 }
 
+/* Navbar Styles */
 .navbar {
   transition: background-color 0.3s ease;
+  /* Smooth transition for background color change */
   padding: 1rem 0;
+  /* Padding for the navbar */
 }
 
 .navbar.scrolled {
   background-color: rgba(255, 118, 33, 0.9) !important;
+  /* Background color when scrolled */
 }
 
 .navbar-brand {
   font-family: "Playfair Display", serif;
+  /* Font for the brand name */
   font-size: 1.5rem;
+  /* Font size for the brand name */
   font-weight: 700;
+  /* Font weight for the brand name */
 }
 
 .nav-link {
   font-weight: 900;
+  /* Font weight for nav links */
   text-transform: uppercase;
+  /* Transform text to uppercase */
   letter-spacing: 1px;
+  /* Letter spacing for nav links */
   padding: 0.5rem 1rem;
+  /* Padding for nav links */
   color: rgb(255, 255, 255);
+  /* Text color for nav links */
 }
 
+/* Hero Section Styles */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg") no-repeat center center;
+  /* Background with gradient overlay and image */
   background-size: cover;
+  /* Cover the entire section */
   height: 100vh;
+  /* Full viewport height */
   display: flex;
+  /* Flexbox for alignment */
   align-items: center;
+  /* Center items vertically */
   color: var(--light-color);
+  /* Text color */
+  padding: 50px 0;
+  /* Padding for top and bottom */
 }
 
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 0;
+    /* Reduced padding for smaller screens */
+  }
+}
+
+/* Button Styles */
 .btn-custom {
   background-color: var(--primary-color);
+  /* Background color for custom buttons */
   color: var(--light-color);
+  /* Text color for buttons */
   border: none;
+  /* Remove border */
   padding: 0.75rem 1.5rem;
+  /* Padding for buttons */
   font-weight: 600;
+  /* Font weight for button text */
   text-transform: uppercase;
+  /* Uppercase text */
   letter-spacing: 1px;
+  /* Letter spacing */
   transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
 }
 
 .btn-custom:hover {
   background-color: var(--secondary-color);
+  /* Change background on hover */
   color: var(--light-color);
+  /* Change text color on hover */
   transform: translateY(-3px);
+  /* Slight upward shift on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Box shadow on hover */
 }
 
+/* Menu Item Styles */
 .menu-item {
   transition: transform 0.3s, box-shadow 0.3s;
+  /* Smooth transitions for hover effects */
   border: none;
+  /* Remove border */
   border-radius: 15px;
+  /* Rounded corners */
   overflow: hidden;
+  /* Hide overflowing content */
 }
 
 .menu-item:hover {
   transform: translateY(-5px);
+  /* Slight upward shift on hover */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Box shadow on hover */
 }
 
 .menu-item img {
   height: 200px;
+  /* Fixed height for images */
   object-fit: cover;
+  /* Ensure images cover the area */
 }
 
+@media (max-width: 768px) {
+  .menu-item img {
+    height: 150px;
+    /* Reduced height for images on smaller screens */
+  }
+}
+
+/* Testimonial Styles */
 .testimonial {
   background-color: var(--light-color);
+  /* Background color */
   border-radius: 15px;
+  /* Rounded corners */
   padding: 30px;
+  /* Padding inside testimonials */
   margin-bottom: 30px;
+  /* Bottom margin */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* Box shadow for depth */
 }
 
 .testimonial img {
   width: 70px;
+  /* Fixed width for testimonial images */
   height: 70px;
+  /* Fixed height for testimonial images */
   border-radius: 50%;
+  /* Circular images */
   margin-right: 20px;
+  /* Right margin for spacing */
   border: 3px solid var(--primary-color);
+  /* Border color */
 }
 
+/* Reservation Form Styles */
 .reservation-form {
   background-color: var(--secondary-color);
+  /* Background color */
   color: var(--light-color);
+  /* Text color */
   padding: 40px;
+  /* Padding inside form */
   border-radius: 15px;
+  /* Rounded corners */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
+}
+
+/* Section Title Styles */
+.section-title {
+  position: relative;
+  /* Positioning for pseudo-element */
 }
 
 .section-title::after {
   content: "";
+  /* Empty content for pseudo-element */
   position: absolute;
+  /* Absolute positioning */
   display: block;
+  /* Block display */
   width: 70px;
+  /* Width of the underline */
   height: 3px;
+  /* Height of the underline */
   background-color: var(--primary-color);
+  /* Color of the underline */
   bottom: 0;
+  /* Align at the bottom */
   left: 50%;
+  /* Center horizontally */
   transform: translateX(-50%);
+  /* Center the underline */
 }
 
+/* Order Section Styles */
 .order-section {
   background-color: var(--light-color);
+  /* Background color */
   padding: 60px 0;
+  /* Padding for top and bottom */
 }
 
 .order-item {
   background-color: #fff;
+  /* Background color */
   border-radius: 15px;
+  /* Rounded corners */
   padding: 20px;
+  /* Padding inside order items */
   margin-bottom: 20px;
+  /* Bottom margin */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* Box shadow for depth */
   transition: transform 0.3s;
+  /* Smooth transition for hover effect */
 }
 
 .order-item:hover {
   transform: translateY(-5px);
+  /* Slight upward shift on hover */
 }
 
 .order-item img {
   width: 100%;
+  /* Full width of the container */
   height: 200px;
+  /* Fixed height */
   object-fit: cover;
+  /* Ensure images cover the area */
   border-radius: 10px;
+  /* Rounded corners */
   margin-bottom: 15px;
+  /* Bottom margin for spacing */
 }
 
 .quantity-input {
   width: 60px;
+  /* Fixed width */
   text-align: center;
+  /* Center text inside input */
 }
 
+/* About Section Styles */
 .about-section {
   background-color: var(--light-color);
+  /* Background color */
   padding: 80px 0;
+  /* Padding for top and bottom */
 }
 
 .about-img {
   border-radius: 15px;
+  /* Rounded corners */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
 }
 
+/* Contact Section Styles */
 .contact-section {
   background-color: var(--secondary-color);
+  /* Background color */
   color: var(--light-color);
+  /* Text color */
   padding: 80px 0;
+  /* Padding for top and bottom */
 }
 
 .contact-info {
   background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly transparent background */
   border-radius: 15px;
+  /* Rounded corners */
   padding: 30px;
+  /* Padding inside contact info */
   margin-bottom: 30px;
+  /* Bottom margin */
 }
 
 .contact-form {
   background-color: var(--light-color);
+  /* Background color */
   border-radius: 15px;
+  /* Rounded corners */
   padding: 30px;
+  /* Padding inside form */
   color: var(--dark-color);
+  /* Text color */
 }
+
 
 .contact-icon {
   font-size: 2rem;
@@ -272,329 +346,506 @@ h6 {
   margin-bottom: 1rem;
 }
 
+/* Menu Category Styles */
 .menu-category {
   font-size: 1.5rem;
+  /* Font size for menu categories */
   color: #666;
+  /* Text color for menu categories */
   margin-top: 1rem;
+  /* Top margin to separate from previous elements */
   margin-bottom: 0.5rem;
+  /* Bottom margin to separate from next elements */
 }
 
+/* Menu Item Styles */
 .menu-item {
   transition: transform 0.3s ease-in-out;
+  /* Smooth transition for scaling effect */
   height: 100%;
+  /* Full height of the container */
 }
 
 .menu-item:hover {
   transform: scale(1.05);
+  /* Slightly enlarge the menu item on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow effect on hover */
 }
 
+/* Card Image Styles */
 .card-img-top {
   height: 200px;
+  /* Fixed height for card images */
   object-fit: cover;
+  /* Ensure the image covers the area without distortion */
 }
 
+/* Card Body Styles */
 .card-body {
   display: flex;
+  /* Flexbox layout for card body */
   flex-direction: column;
+  /* Stack children vertically */
 }
 
+/* Card Title Styles */
 .card-title {
   font-weight: bold;
+  /* Bold text for card titles */
   margin-bottom: 0.5rem;
+  /* Space below the title */
 }
 
+/* Card Text Styles */
 .card-text {
   flex-grow: 1;
+  /* Allow text to take available space */
 }
 
+/* Price Styles */
 .price {
   font-weight: bold;
+  /* Bold text for price */
   color: #ff6600;
+  /* Orange color for price */
   margin-top: auto;
+  /* Push price to the bottom of the card body */
 }
 
+/* Testimonial Card Styles */
 .testimonial-card {
   background-color: #ffffff;
+  /* White background for testimonial cards */
   border-radius: 15px;
+  /* Rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Shadow effect for depth */
   padding: 30px;
+  /* Padding inside the card */
   transition: transform 0.3s ease;
+  /* Smooth transition for hover effect */
   height: 100%;
+  /* Full height of the container */
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
+  /* Slightly lift the card on hover */
 }
 
+/* Testimonial Content Styles */
 .testimonial-content {
   position: relative;
+  /* Relative positioning for quote icon */
   margin-bottom: 20px;
+  /* Space below testimonial content */
 }
 
+/* Quote Icon Styles */
 .quote-icon {
   color: #ff6600;
+  /* Orange color for the quote icon */
   font-size: 24px;
+  /* Font size for the quote icon */
   position: absolute;
+  /* Absolute positioning */
   top: -10px;
+  /* Position icon above content */
   left: -15px;
+  /* Position icon to the left of content */
 }
 
+/* Testimonial Text Styles */
 .testimonial-content p {
   font-style: italic;
+  /* Italicize testimonial text */
   color: #555;
+  /* Dark grey color for text */
   line-height: 1.6;
+  /* Line height for readability */
 }
 
+/* Testimonial Author Styles */
 .testimonial-author {
   display: flex;
+  /* Flexbox layout for author info */
   align-items: center;
+  /* Align items vertically */
   margin-top: 20px;
+  /* Space above author info */
 }
 
+/* Author Image Styles */
 .author-img {
   width: 60px;
+  /* Fixed width for author images */
   height: 60px;
+  /* Fixed height for author images */
   border-radius: 50%;
+  /* Circular images */
   margin-right: 15px;
+  /* Space between image and text */
   object-fit: cover;
+  /* Ensure image covers area without distortion */
 }
 
+/* Author Info Styles */
 .author-info h5 {
   margin: 0;
+  /* Remove margin from author name */
   color: #333;
+  /* Dark grey color for author name */
 }
 
 .author-info span {
   font-size: 0.9em;
+  /* Slightly smaller font size for author details */
   color: #777;
+  /* Light grey color for author details */
 }
 
+/* Testimonial Rating Styles */
 .testimonial-rating {
   color: #ff6600;
+  /* Orange color for testimonial rating */
   margin-top: 10px;
+  /* Space above rating */
 }
 
+/* Section Title Styles */
 .section-title {
   position: relative;
-
+  /* Relative positioning for underline effect */
   padding-bottom: 10px;
+  /* Padding below the title */
   margin-bottom: 30px;
+  /* Margin below the section title */
   text-align: center;
+  /* Center text */
 }
 
 .mb-4 {
   font-weight: 900 !important;
+  /* Extra bold text */
 }
 
+/* Global Font Styles */
 body {
   font-family: 'Poppins', sans-serif;
+  /* Main font for the body text */
 }
 
 /* Navbar Styles */
 .navbar {
   transition: all 0.4s ease;
+  /* Smooth transition for background and shadow effects */
   padding: 1rem 0;
+  /* Padding for the navbar */
   background-color: transparent;
+  /* Initial transparent background */
 }
 
 .navbar.scrolled {
   background-color: var(--dark-color);
+  /* Dark background when scrolled */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  /* Shadow effect for depth */
 }
 
 .navbar-brand {
   display: flex;
+  /* Flexbox layout for brand */
   align-items: center;
+  /* Align items vertically */
 }
 
-
+/* Logo Hover Effect */
 .navbar-brand:hover .logo {
   transform: rotate(10deg);
+  /* Rotate logo on hover */
 }
 
+/* Brand Text Styles */
 .brand-text {
   font-family: 'Playfair Display', serif;
+  /* Serif font for brand text */
   font-size: 2rem;
+  /* Font size for brand text */
   font-weight: 700;
+  /* Bold font weight */
   color: var(--light-color);
+  /* Light color for text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Shadow effect for text */
 }
 
+/* Navigation Link Styles */
 .nav-link {
   font-weight: 600;
+  /* Semi-bold text for nav links */
   text-transform: uppercase;
+  /* Uppercase text */
   letter-spacing: 1px;
+  /* Letter spacing for readability */
   padding: 0.5rem 1rem;
+  /* Padding for nav links */
   color: var(--light-color);
+  /* Light color for text */
   position: relative;
+  /* Position relative for underline effect */
   overflow: hidden;
+  /* Hide overflow */
 }
 
+/* Underline Animation for Nav Links */
 .nav-link::before {
   content: '';
+  /* Empty content for the underline */
   position: absolute;
+  /* Absolute positioning for the underline */
   width: 100%;
+  /* Full width of the link */
   height: 2px;
+  /* Height of the underline */
   bottom: 0;
+  /* Position at the bottom */
   left: -100%;
+  /* Start from the left of the link */
   background-color: #ff6b35;
+  /* Orange color for the underline */
   transition: all 0.3s ease;
+  /* Smooth transition for the underline */
 }
 
 .nav-link:hover::before {
   left: 0;
+  /* Move the underline into view on hover */
 }
 
 /* Hero Section Styles */
 .hero-section {
   height: 100vh;
+  /* Full viewport height */
   position: relative;
+  /* Relative positioning for overlay */
   overflow: hidden;
+  /* Hide overflow */
   display: flex;
+  /* Flexbox layout for centering content */
   align-items: center;
+  /* Center items vertically */
   justify-content: center;
+  /* Center items horizontally */
 }
 
+/* Hero Overlay Styles */
 .hero-overlay {
   position: absolute;
+  /* Absolute positioning to cover the entire section */
   top: 0;
+  /* Align at the top */
   left: 0;
+  /* Align at the left */
   right: 0;
+  /* Align at the right */
   bottom: 0;
+  /* Align at the bottom */
   background: linear-gradient(135deg, rgba(20, 33, 61, 0.8), rgba(252, 163, 17, 0.8));
+  /* Gradient overlay */
   z-index: 1;
+  /* Ensure overlay is behind content */
 }
 
+/* Hero Content Styles */
 .hero-content {
   position: relative;
+  /* Relative positioning for layering above the overlay */
   z-index: 2;
+  /* Ensure content is above overlay */
   text-align: center;
+  /* Center text */
   color: var(--light-color);
+  /* Light color for text */
   max-width: 800px;
+  /* Maximum width for content */
   padding: 2rem;
+  /* Padding inside the content */
 }
 
+/* Hero Title Styles */
 .hero-title {
   font-size: 5rem;
+  /* Large font size for the main title */
   font-weight: 800;
+  /* Extra bold text */
   margin-bottom: 1rem;
+  /* Space below the title */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  /* Shadow effect for readability */
   animation: slideInDown 1s ease;
+  /* Animation for sliding in */
 }
 
+/* Highlight Styles */
 .highlight {
   color: var(--secondary-color);
+  /* Secondary color for highlights */
 }
 
+/* Hero Subtitle Styles */
 .hero-subtitle {
   font-size: 2.5rem;
+  /* Font size for the subtitle */
   font-weight: 300;
+  /* Light font weight */
   margin-bottom: 1.5rem;
+  /* Space below the subtitle */
   animation: slideInUp 1s ease 0.5s;
+  /* Animation for sliding in */
   animation-fill-mode: both;
+  /* Retain final state of the animation */
 }
 
+/* Hero Description Styles */
 .hero-description {
   font-size: 1.2rem;
+  /* Font size for the description */
   margin-bottom: 2rem;
+  /* Space below the description */
   animation: fadeIn 1s ease 1s;
+  /* Animation for fading in */
   animation-fill-mode: both;
+  /* Retain final state of the animation */
 }
 
+/* Hero Buttons Styles */
 .hero-buttons {
   animation: fadeInUp 1s ease 1.5s;
+  /* Animation for fading in and moving up */
   animation-fill-mode: both;
+  /* Retain final state of the animation */
 }
 
+/* Primary Button Styles */
 .btn-primary {
   background-color: var(--primary-color);
+  /* Primary color for buttons */
   border-color: var(--primary-color);
+  /* Border color for buttons */
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
+  /* Secondary color on hover */
   border-color: var(--secondary-color);
+  /* Border color on hover */
   transform: translateY(-3px);
+  /* Slightly lift the button on hover */
   box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4);
+  /* Shadow effect on hover */
 }
 
 /* Animations */
 @keyframes slideInDown {
   from {
     opacity: 0;
+    /* Start as invisible */
     transform: translateY(-100px);
+    /* Start from above */
   }
 
   to {
     opacity: 1;
+    /* End as visible */
     transform: translateY(0);
+    /* End at original position */
   }
 }
 
 @keyframes slideInUp {
   from {
     opacity: 0;
+    /* Start as invisible */
     transform: translateY(100px);
+    /* Start from below */
   }
 
   to {
     opacity: 1;
+    /* End as visible */
     transform: translateY(0);
+    /* End at original position */
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    /* Start as invisible */
   }
 
   to {
     opacity: 1;
+    /* End as visible */
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
+    /* Start as invisible */
     transform: translateY(20px);
+    /* Start from below */
   }
 
   to {
     opacity: 1;
+    /* End as visible */
     transform: translateY(0);
+    /* End at original position */
   }
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 3.5rem;
+    /* Smaller font size for hero title on small screens */
   }
 
   .hero-subtitle {
     font-size: 2rem;
+    /* Smaller font size for hero subtitle on small screens */
   }
 }
+
+/* Offers Section Styles */
 #offers .card {
   transition: transform 0.3s ease-in-out;
+  /* Smooth transition for scaling effect */
 }
 
 #offers .card:hover {
   transform: translateY(-5px);
+  /* Slightly lift the card on hover */
 }
 
 #offers .card-header {
   font-weight: bold;
+  /* Bold text for card headers */
 }
 
 #offers .card-body {
   display: flex;
+  /* Flexbox layout for card body */
   flex-direction: column;
+  /* Stack children vertically */
   justify-content: space-between;
+  /* Space between items */
 }
 
 #offers .text-muted {
   font-style: italic;
+  /* Italicize muted text */
 }
-   
